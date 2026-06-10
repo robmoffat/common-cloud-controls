@@ -1,0 +1,21 @@
+metadata:
+  id: CCC.CDN
+  title: CCC Content Delivery Network
+  description: |
+    A Content Delivery Network (CDN) is a distributed cloud service that accelerates and optimizes the delivery of web content, APIs, and media across the globe. CDNs enhance performance, reduce latency, and provide security features by caching content at edge locations close to users. They are essential for scalable, reliable, and secure content distribution in cloud environments.
+  category-ids: 
+    - CCC.Network
+  version: ""
+  last-modified: "2024-06-20T00:00:00Z"
+  example-csp-services:
+    - provider: AWS
+      service: Amazon CloudFront
+      url: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
+    - provider: Azure
+      service: Azure Content Delivery Network (CDN)
+      url: https://learn.microsoft.com/azure/cdn/cdn-overview
+    - provider: GCP
+      service: Cloud CDN
+      url: https://cloud.google.com/cdn/docs/overview
+  applicability-categories: []
+  mapping-references: []
