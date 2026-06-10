@@ -13,82 +13,96 @@ imported-capabilities:
         remarks: Signed URLs
       - reference-id: CCC.Core.CP06
         remarks: Access Control
+      - reference-id: CCC.Core.CP08
+        remarks: Data Replication
       - reference-id: CCC.Core.CP09
         remarks: Metrics Publication
       - reference-id: CCC.Core.CP10
         remarks: Log Publication
       - reference-id: CCC.Core.CP14
         remarks: API Access
+      - reference-id: CCC.Core.CP15
+        remarks: Cost Management
+      - reference-id: CCC.Core.CP17
+        remarks: Alerting
       - reference-id: CCC.Core.CP19
         remarks: Child Resource Scaling
       - reference-id: CCC.Core.CP20
         remarks: Resource Tagging
-      - reference-id: CCC.Core.CP21
-        remarks: Resource Replication
       - reference-id: CCC.Core.CP22
         remarks: Location Lock-In
       - reference-id: CCC.Core.CP23
         remarks: Network Access Rules
-      - reference-id: CCC.Core.CP31
-        remarks: Elastic Scaling
 
 capabilities:
   - id: CCC.CDN.CP01
-    group: Data
-    title: Content Caching
+    group: Distribution
+    title: Edge Content Caching
     description: |
-      The service always caches static and dynamic content in distributed edge locations to accelerate content delivery and reduce latency.
+      The service always caches web content, media files, and APIs at edge locations worldwide to optimize delivery speed and reduce latency.
 
   - id: CCC.CDN.CP02
-    group: Data
-    title: Cache Invalidation
-    description: |
-      The service can invalidate cached content automatically or manually to ensure freshness and consistency across edge locations.
-
-  - id: CCC.CDN.CP03
-    group: Security
-    title: Origin Access Control
-    description: |
-      The service can be configured to restrict and secure access to origin servers through authenticated requests and custom header enforcement.
-
-  - id: CCC.CDN.CP04
-    group: Security
-    title: DDoS Protection
-    description: |
-      The service always provides network-level protection against Distributed Denial of Service attacks as part of the delivery infrastructure.
-
-  - id: CCC.CDN.CP05
-    group: Network
-    title: Custom Domain Support
-    description: |
-      The service can be configured to deliver content using customer-owned domains by managing DNS records and SSL certificates.
-
-  - id: CCC.CDN.CP06
-    group: Data
+    group: Distribution
     title: Origin Failover
     description: |
-      The service can automatically redirect requests to alternate origins when the primary origin is unreachable.
+      The service can automatically route requests to alternate origins when the primary origin is unavailable to maintain content availability.
+
+  - id: CCC.CDN.CP03
+    group: Distribution
+    title: Content Purge
+    description: |
+      The service can remove cached content from all edge locations when an administrator triggers a purge event to ensure content freshness.
+
+  - id: CCC.CDN.CP04
+    group: Distribution
+    title: Custom Cache Rules
+    description: |
+      The service may be configured to support custom cache expiration, invalidation, and behavior rules for content served at edge locations.
+
+  - id: CCC.CDN.CP05
+    group: Security
+    title: DDoS Mitigation
+    description: |
+      The service always protects web applications by automatically detecting and mitigating distributed denial-of-service attacks at edge locations.
+
+  - id: CCC.CDN.CP06
+    group: Security
+    title: Web Application Firewall Integration
+    description: |
+      The service may be configured to integrate with a web application firewall to automatically inspect and block malicious or unwanted traffic.
 
   - id: CCC.CDN.CP07
-    group: Data
-    title: Content Compression
+    group: Distribution
+    title: Protocol Negotiation
     description: |
-      The service can automatically compress content using standard algorithms (e.g., Gzip, Brotli) to optimize bandwidth and delivery speed.
+      The service always negotiates supported protocols such as HTTP/2 and HTTP/3 with clients to optimize delivery and compatibility.
 
   - id: CCC.CDN.CP08
-    group: Access
-    title: Geo-based Access Control
+    group: Security
+    title: TLS Certificate Management
     description: |
-      The service can restrict or allow content delivery based on requestor geographic location according to configurable access rules.
+      The service may be configured to automatically provision, renew, and rotate TLS certificates for secure content delivery.
 
   - id: CCC.CDN.CP09
-    group: Security
-    title: HTTPS Enforcement
+    group: Distribution
+    title: Compression Support
     description: |
-      The service can enforce HTTPS for content delivery to ensure secure transmission to users.
+      The service always compresses content using standard algorithms before delivery to reduce bandwidth and accelerate transfer times.
 
   - id: CCC.CDN.CP10
-    group: Data
-    title: Real-Time Purge
+    group: Distribution
+    title: Global Routing Optimization
     description: |
-      The service can purge content from cache immediately across all edge nodes when required for compliance or content updates.
+      The service always selects the optimal edge location for each request to minimize latency and maximize performance.
+
+  - id: CCC.CDN.CP11
+    group: Distribution
+    title: Custom Domain Support
+    description: |
+      The service may be configured to deliver content under custom domains managed by the user for branding and flexibility.
+
+  - id: CCC.CDN.CP12
+    group: Management
+    title: Real-Time Configuration Updates
+    description: |
+      The service may be configured to propagate configuration changes to all edge locations in real time for immediate effect.
